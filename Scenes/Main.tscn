@@ -92,6 +92,7 @@ item_4/text = "Placeholders"
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 8
+theme_override_constants/separation = 0
 alignment = 1
 
 [node name="AddTask" type="Button" parent="VBoxContainer/HBoxContainer"]
