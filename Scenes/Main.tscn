@@ -1,10 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://sr3vpk63ovfn"]
+[gd_scene load_steps=6 format=3 uid="uid://sr3vpk63ovfn"]
 
 [ext_resource type="Script" uid="uid://dbj4bu62lefqy" path="res://Scripts/SceneControllers/MainScreen.gd" id="1_r150o"]
 [ext_resource type="Theme" uid="uid://bbdjky584xraq" path="res://Theme.tres" id="2_idj7w"]
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_rxg2q"]
-size = Vector2(128, 128)
 
 [sub_resource type="LabelSettings" id="LabelSettings_uu6xs"]
 font_size = 48
@@ -50,7 +47,6 @@ size_flags_vertical = 3
 
 [node name="TextureRect" type="TextureRect" parent="VBoxContainer/ScrollContainer/VBoxContainer"]
 layout_mode = 2
-texture = SubResource("PlaceholderTexture2D_rxg2q")
 stretch_mode = 3
 
 [node name="Streak" type="Label" parent="VBoxContainer/ScrollContainer/VBoxContainer"]
