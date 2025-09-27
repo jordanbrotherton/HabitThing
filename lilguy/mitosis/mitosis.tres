@@ -1,0 +1,16 @@
+[gd_resource type="AnimatedTexture" load_steps=5 format=3 uid="uid://2stphivgagyy"]
+
+[ext_resource type="Texture2D" uid="uid://douf3gel6akb2" path="res://lilguy/mitosis/tile000.png" id="1_3doou"]
+[ext_resource type="Texture2D" uid="uid://t6j8ro08ygv2" path="res://lilguy/mitosis/tile001.png" id="2_esrcg"]
+[ext_resource type="Texture2D" uid="uid://bgxgnxe7sfggv" path="res://lilguy/mitosis/tile002.png" id="3_ar3gb"]
+[ext_resource type="Texture2D" uid="uid://bel583k5uqs3t" path="res://lilguy/mitosis/tile003.png" id="4_pv8i3"]
+
+[resource]
+frames = 4
+frame_0/texture = ExtResource("1_3doou")
+frame_1/texture = ExtResource("2_esrcg")
+frame_1/duration = 1.0
+frame_2/texture = ExtResource("3_ar3gb")
+frame_2/duration = 1.0
+frame_3/texture = ExtResource("4_pv8i3")
+frame_3/duration = 1.0
