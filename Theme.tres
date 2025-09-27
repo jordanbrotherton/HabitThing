@@ -1,4 +1,6 @@
-[gd_resource type="Theme" load_steps=6 format=3 uid="uid://bbdjky584xraq"]
+[gd_resource type="Theme" load_steps=11 format=3 uid="uid://bbdjky584xraq"]
+
+[ext_resource type="FontFile" uid="uid://buafevi11edge" path="res://TTF/Pixeled.ttf" id="1_yd3fu"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_23v3e"]
 content_margin_top = 5.0
@@ -8,12 +10,21 @@ bg_color = Color(0.5580313, 0.8521415, 1, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yd3fu"]
 content_margin_top = 5.0
 content_margin_bottom = 5.0
-bg_color = Color(0.18148944, 0.38218924, 0.77239704, 1)
+bg_color = Color(0.19106719, 0.3950551, 0.79456156, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k1aya"]
 content_margin_top = 5.0
 content_margin_bottom = 5.0
 bg_color = Color(2.0214916e-06, 0.46564102, 0.6248467, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j4jqe"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c6xh3"]
+bg_color = Color(0.9955804, 0.99558026, 0.99558026, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t6dyh"]
+bg_color = Color(0.42922115, 0.61182237, 0.95265096, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_abrne"]
 bg_color = Color(1, 1, 1, 1)
@@ -22,21 +33,36 @@ corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y2aw4"]
+bg_color = Color(0.18039216, 0.38039216, 0.77254903, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_abrne"]
 content_margin_left = 5.0
 content_margin_right = 5.0
 
 [resource]
+default_font = ExtResource("1_yd3fu")
+default_font_size = 10
 Button/colors/font_color = Color(1, 1, 1, 1)
 Button/colors/font_focus_color = Color(0, 0, 0, 1)
 Button/colors/font_hover_color = Color(0, 0, 0, 1)
 Button/colors/font_pressed_color = Color(0, 0, 0, 1)
-Button/fonts/font = null
+Button/font_sizes/font_size = 10
+Button/fonts/font = ExtResource("1_yd3fu")
 Button/styles/hover = SubResource("StyleBoxFlat_23v3e")
 Button/styles/normal = SubResource("StyleBoxFlat_yd3fu")
 Button/styles/pressed = SubResource("StyleBoxFlat_k1aya")
+CheckButton/fonts/font = ExtResource("1_yd3fu")
+CheckButton/styles/focus = SubResource("StyleBoxFlat_j4jqe")
+CheckButton/styles/normal = SubResource("StyleBoxFlat_c6xh3")
+CheckButton/styles/pressed = SubResource("StyleBoxFlat_t6dyh")
 ItemList/colors/font_color = Color(0.23934695, 0.23934722, 0.23934704, 1)
 ItemList/styles/panel = SubResource("StyleBoxFlat_abrne")
+Panel/styles/panel = SubResource("StyleBoxFlat_y2aw4")
 ScrollContainer/styles/panel = SubResource("StyleBoxEmpty_abrne")
 TextEdit/colors/background_color = Color(1, 1, 1, 1)
 TextEdit/colors/caret_background_color = Color(0, 0, 0, 1)
@@ -54,8 +80,8 @@ TextEdit/colors/word_highlighted_color = Color(0, 0, 0, 1)
 TextEdit/constants/caret_width = 0
 TextEdit/constants/line_spacing = 0
 TextEdit/constants/outline_size = 0
-TextEdit/font_sizes/font_size = 16
-TextEdit/fonts/font = null
+TextEdit/font_sizes/font_size = 10
+TextEdit/fonts/font = ExtResource("1_yd3fu")
 TextEdit/icons/space = null
 TextEdit/icons/tab = null
 TextEdit/styles/focus = null

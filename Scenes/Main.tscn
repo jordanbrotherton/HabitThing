@@ -55,6 +55,7 @@ stretch_mode = 3
 
 [node name="Streak" type="Label" parent="VBoxContainer/ScrollContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_font_sizes/font_size = 10
 text = "0 Days"
 label_settings = SubResource("LabelSettings_uu6xs")
 horizontal_alignment = 1

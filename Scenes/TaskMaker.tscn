@@ -1,4 +1,29 @@
-[gd_scene format=3 uid="uid://072wye2o7qub"]
+[gd_scene load_steps=6 format=3 uid="uid://072wye2o7qub"]
+
+[sub_resource type="Theme" id="Theme_jvtbt"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jvtbt"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2g0e1"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_87r46"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n43h0"]
+bg_color = Color(0.33414626, 0.5369221, 0.92722076, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
 
 [node name="TaskMaker" type="Control"]
 layout_mode = 3
@@ -15,6 +40,24 @@ anchors_preset = 10
 anchor_right = 1.0
 grow_horizontal = 2
 color = Color(0.18039216, 0.38039216, 0.77254903, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 8.0
+offset_right = 331.0
+offset_bottom = 78.0
+theme_override_font_sizes/font_size = 16
+text = "ADD TASK"
+horizontal_alignment = 1
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 168.0
+offset_right = 358.0
+offset_bottom = 474.0
+theme = SubResource("Theme_jvtbt")
 
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
 layout_mode = 1
@@ -36,21 +79,71 @@ grow_vertical = 2
 [node name="TaskName" type="TextEdit" parent="VBoxContainer"]
 custom_minimum_size = Vector2(0, 45)
 layout_mode = 2
-size_flags_horizontal = 3
-placeholder_text = "Task Name"
+theme_override_colors/font_color = Color(0.18039216, 0.38039216, 0.77254903, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_jvtbt")
+placeholder_text = " Task Name"
 
 [node name="FocusCheck" type="CheckButton" parent="VBoxContainer"]
 layout_mode = 2
-text = "Focus Task"
+theme_override_colors/font_color = Color(0.18039216, 0.38039216, 0.77254903, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_2g0e1")
+theme_override_colors/button_checked_color = Color(0.18039216, 0.38039216, 0.77254903, 1)
+theme_override_colors/button_unchecked_color = Color(1, 1, 1, 1)
+text = "  Focus Task"
 
-[node name="FocusCheck2" type="CheckButton" parent="VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
-text = "Repeat"
+alignment = 1
 
-[node name="Button" type="Button" parent="VBoxContainer"]
+[node name="SpinBox" type="SpinBox" parent="VBoxContainer/HBoxContainer"]
 layout_mode = 2
-size_flags_vertical = 8
-text = "Add Task"
+size_flags_horizontal = 0
+alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "hrs  "
+
+[node name="SpinBox2" type="SpinBox" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+alignment = 1
+
+[node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "mins"
+
+[node name="Repeat" type="CheckButton" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.18039216, 0.38039216, 0.77254903, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_87r46")
+text = "  Repeat"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="SpinBox" type="SpinBox" parent="VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 0
+alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "times  "
+
+[node name="OptionButton" type="OptionButton" parent="VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_n43h0")
+item_count = 4
+popup/item_0/text = "Daily"
+popup/item_0/id = 0
+popup/item_1/text = "Weekly"
+popup/item_1/id = 1
+popup/item_2/text = "Monthly"
+popup/item_2/id = 2
+popup/item_3/text = "Yearly"
+popup/item_3/id = 3
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 1
@@ -67,9 +160,9 @@ alignment = 1
 [node name="CancelButton" type="Button" parent="HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "Cancel"
+text = "CANCEL"
 
 [node name="AddButton" type="Button" parent="HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "Add"
+text = "ADD"
