@@ -14,7 +14,7 @@ layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
 grow_horizontal = 2
-color = Color(0, 0.7529412, 1, 1)
+color = Color(0.18039216, 0.38039216, 0.77254903, 1)
 
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
 layout_mode = 1
@@ -42,6 +42,10 @@ placeholder_text = "Task Name"
 [node name="FocusCheck" type="CheckButton" parent="VBoxContainer"]
 layout_mode = 2
 text = "Focus Task"
+
+[node name="FocusCheck2" type="CheckButton" parent="VBoxContainer"]
+layout_mode = 2
+text = "Repeat"
 
 [node name="Button" type="Button" parent="VBoxContainer"]
 layout_mode = 2

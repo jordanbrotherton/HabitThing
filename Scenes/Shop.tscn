@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://cgya26acvym8i"]
+[gd_scene load_steps=7 format=3 uid="uid://cgya26acvym8i"]
 
 [ext_resource type="Theme" uid="uid://bbdjky584xraq" path="res://Theme.tres" id="1_kjfcx"]
 
@@ -10,6 +10,12 @@ font_color = Color(0, 0, 0, 1)
 size = Vector2(64, 64)
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_iidq5"]
+size = Vector2(64, 64)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_lagin"]
+size = Vector2(64, 64)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_i4qx4"]
 size = Vector2(64, 64)
 
 [node name="Shop" type="Control"]
@@ -31,7 +37,7 @@ grow_vertical = 2
 [node name="ColorRect" type="ColorRect" parent="VBoxContainer"]
 custom_minimum_size = Vector2(0, 68)
 layout_mode = 2
-color = Color(0, 0.7529412, 1, 1)
+color = Color(0.18039216, 0.38039216, 0.77254903, 1)
 
 [node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer"]
 layout_mode = 2
@@ -44,19 +50,24 @@ size_flags_vertical = 3
 
 [node name="ShopLabel" type="Label" parent="VBoxContainer/ScrollContainer/VBoxContainer"]
 layout_mode = 2
-text = "Shop"
+text = "HatPedia"
 label_settings = SubResource("LabelSettings_5iolr")
+horizontal_alignment = 1
 
 [node name="DueList" type="ItemList" parent="VBoxContainer/ScrollContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 4
 theme = ExtResource("1_kjfcx")
 auto_height = true
-item_count = 2
-item_0/text = "Placeholder"
+item_count = 4
+item_0/text = "Halo"
 item_0/icon = SubResource("PlaceholderTexture2D_kjfcx")
-item_1/text = "Another Item"
+item_1/text = "Wizard"
 item_1/icon = SubResource("PlaceholderTexture2D_iidq5")
+item_2/text = "Pirate"
+item_2/icon = SubResource("PlaceholderTexture2D_lagin")
+item_3/text = "Transparent"
+item_3/icon = SubResource("PlaceholderTexture2D_i4qx4")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2

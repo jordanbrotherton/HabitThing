@@ -8,7 +8,7 @@ bg_color = Color(0.5580313, 0.8521415, 1, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yd3fu"]
 content_margin_top = 5.0
 content_margin_bottom = 5.0
-bg_color = Color(0, 0.7529412, 1, 1)
+bg_color = Color(0.18148944, 0.38218924, 0.77239704, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k1aya"]
 content_margin_top = 5.0
@@ -16,7 +16,7 @@ content_margin_bottom = 5.0
 bg_color = Color(2.0214916e-06, 0.46564102, 0.6248467, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_abrne"]
-bg_color = Color(0.63530856, 0.83879, 0.9999997, 1)
+bg_color = Color(1, 1, 1, 1)
 corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
@@ -27,21 +27,22 @@ content_margin_left = 5.0
 content_margin_right = 5.0
 
 [resource]
-Button/colors/font_color = Color(0, 0, 0, 1)
+Button/colors/font_color = Color(1, 1, 1, 1)
 Button/colors/font_focus_color = Color(0, 0, 0, 1)
 Button/colors/font_hover_color = Color(0, 0, 0, 1)
 Button/colors/font_pressed_color = Color(0, 0, 0, 1)
+Button/fonts/font = null
 Button/styles/hover = SubResource("StyleBoxFlat_23v3e")
 Button/styles/normal = SubResource("StyleBoxFlat_yd3fu")
 Button/styles/pressed = SubResource("StyleBoxFlat_k1aya")
 ItemList/colors/font_color = Color(0.23934695, 0.23934722, 0.23934704, 1)
 ItemList/styles/panel = SubResource("StyleBoxFlat_abrne")
 ScrollContainer/styles/panel = SubResource("StyleBoxEmpty_abrne")
-TextEdit/colors/background_color = Color(0.8039216, 1, 1, 1)
+TextEdit/colors/background_color = Color(1, 1, 1, 1)
 TextEdit/colors/caret_background_color = Color(0, 0, 0, 1)
 TextEdit/colors/caret_color = Color(0, 0, 0, 1)
 TextEdit/colors/current_line_color = Color(0, 0, 0, 1)
-TextEdit/colors/font_color = Color(1.2513996e-06, 0, 0.4967038, 1)
+TextEdit/colors/font_color = Color(1, 1, 1, 1)
 TextEdit/colors/font_outline_color = Color(0, 0, 0, 1)
 TextEdit/colors/font_placeholder_color = Color(0, 0, 0, 1)
 TextEdit/colors/font_readonly_color = Color(0, 0, 0, 1)

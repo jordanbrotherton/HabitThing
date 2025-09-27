@@ -34,7 +34,7 @@ grow_vertical = 2
 [node name="ColorRect" type="ColorRect" parent="VBoxContainer"]
 custom_minimum_size = Vector2(0, 68)
 layout_mode = 2
-color = Color(0, 0.7529412, 1, 1)
+color = Color(0.18039216, 0.38039216, 0.77254903, 1)
 
 [node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer"]
 layout_mode = 2
