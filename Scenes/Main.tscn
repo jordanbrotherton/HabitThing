@@ -2,9 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dbj4bu62lefqy" path="res://Scripts/SceneControllers/MainScreen.gd" id="1_r150o"]
 [ext_resource type="Theme" uid="uid://bbdjky584xraq" path="res://Theme.tres" id="2_idj7w"]
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_rxg2q"]
-size = Vector2(128, 128)
+[ext_resource type="Texture2D" uid="uid://kddi2ggjj2ja" path="res://lilguy/base/base.tres" id="2_kln2b"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_uu6xs"]
 font_size = 48
@@ -49,9 +47,10 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="TextureRect" type="TextureRect" parent="VBoxContainer/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
-texture = SubResource("PlaceholderTexture2D_rxg2q")
-stretch_mode = 3
+texture = ExtResource("2_kln2b")
+stretch_mode = 5
 
 [node name="Streak" type="Label" parent="VBoxContainer/ScrollContainer/VBoxContainer"]
 layout_mode = 2
@@ -93,6 +92,7 @@ item_4/text = "Placeholders"
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 8
+theme_override_constants/separation = 0
 alignment = 1
 
 [node name="AddTask" type="Button" parent="VBoxContainer/HBoxContainer"]

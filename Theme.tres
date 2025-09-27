@@ -41,8 +41,8 @@ corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_abrne"]
-content_margin_left = 5.0
-content_margin_right = 5.0
+content_margin_left = 20.0
+content_margin_right = 20.0
 
 [resource]
 default_font = ExtResource("1_yd3fu")

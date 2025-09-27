@@ -1,0 +1,29 @@
+[gd_resource type="AnimatedTexture" load_steps=9 format=3 uid="uid://cv20ew1cms5h7"]
+
+[ext_resource type="Texture2D" uid="uid://y65anvd67q3v" path="res://lilguy/pirate/tile000.png" id="1_fhvmq"]
+[ext_resource type="Texture2D" uid="uid://bgo368g3pj18x" path="res://lilguy/pirate/tile001.png" id="2_mlhq4"]
+[ext_resource type="Texture2D" uid="uid://d256uc8ykq4no" path="res://lilguy/pirate/tile002.png" id="3_3gabd"]
+[ext_resource type="Texture2D" uid="uid://cw5i21sflak2v" path="res://lilguy/pirate/tile003.png" id="4_nj81s"]
+[ext_resource type="Texture2D" uid="uid://cqb5sbdni6uox" path="res://lilguy/pirate/tile004.png" id="5_2fnss"]
+[ext_resource type="Texture2D" uid="uid://4ncr6jhuotib" path="res://lilguy/pirate/tile005.png" id="6_j4mn7"]
+[ext_resource type="Texture2D" uid="uid://b6dwmgk3dbm3t" path="res://lilguy/pirate/tile006.png" id="7_umexe"]
+[ext_resource type="Texture2D" uid="uid://dsad71pneroan" path="res://lilguy/pirate/tile007.png" id="8_61tp0"]
+
+[resource]
+frames = 8
+speed_scale = 2.0
+frame_0/texture = ExtResource("1_fhvmq")
+frame_1/texture = ExtResource("2_mlhq4")
+frame_1/duration = 1.0
+frame_2/texture = ExtResource("3_3gabd")
+frame_2/duration = 1.0
+frame_3/texture = ExtResource("4_nj81s")
+frame_3/duration = 1.0
+frame_4/texture = ExtResource("5_2fnss")
+frame_4/duration = 1.0
+frame_5/texture = ExtResource("6_j4mn7")
+frame_5/duration = 1.0
+frame_6/texture = ExtResource("7_umexe")
+frame_6/duration = 1.0
+frame_7/texture = ExtResource("8_61tp0")
+frame_7/duration = 1.0

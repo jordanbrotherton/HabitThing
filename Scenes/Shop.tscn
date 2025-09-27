@@ -1,22 +1,15 @@
-[gd_scene load_steps=7 format=3 uid="uid://cgya26acvym8i"]
+[gd_scene load_steps=8 format=3 uid="uid://cgya26acvym8i"]
 
 [ext_resource type="Theme" uid="uid://bbdjky584xraq" path="res://Theme.tres" id="1_kjfcx"]
+[ext_resource type="Script" uid="uid://dyth805qvn3s8" path="res://Scripts/SceneControllers/Shop.gd" id="1_wndna"]
+[ext_resource type="Texture2D" uid="uid://kkv8n61yfce6" path="res://lilguy/angel/angel.tres" id="2_e5ji4"]
+[ext_resource type="Texture2D" uid="uid://dd2mj11cpp3gp" path="res://lilguy/wizard/wizard.tres" id="3_wndna"]
+[ext_resource type="Texture2D" uid="uid://cv20ew1cms5h7" path="res://lilguy/pirate/pirate.tres" id="4_ckylj"]
+[ext_resource type="Texture2D" uid="uid://di4jkq7cgbwi8" path="res://lilguy/transparent/transparent.tres" id="5_2aaoe"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_5iolr"]
 font_size = 32
 font_color = Color(0, 0, 0, 1)
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_kjfcx"]
-size = Vector2(64, 64)
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_iidq5"]
-size = Vector2(64, 64)
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_lagin"]
-size = Vector2(64, 64)
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_i4qx4"]
-size = Vector2(64, 64)
 
 [node name="Shop" type="Control"]
 layout_mode = 3
@@ -25,6 +18,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_wndna")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -60,14 +54,15 @@ size_flags_vertical = 4
 theme = ExtResource("1_kjfcx")
 auto_height = true
 item_count = 4
+icon_scale = 2.5
 item_0/text = "Halo"
-item_0/icon = SubResource("PlaceholderTexture2D_kjfcx")
+item_0/icon = ExtResource("2_e5ji4")
 item_1/text = "Wizard"
-item_1/icon = SubResource("PlaceholderTexture2D_iidq5")
+item_1/icon = ExtResource("3_wndna")
 item_2/text = "Pirate"
-item_2/icon = SubResource("PlaceholderTexture2D_lagin")
+item_2/icon = ExtResource("4_ckylj")
 item_3/text = "Transparent"
-item_3/icon = SubResource("PlaceholderTexture2D_i4qx4")
+item_3/icon = ExtResource("5_2aaoe")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
@@ -79,3 +74,6 @@ layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("1_kjfcx")
 text = "Return"
+
+[connection signal="item_clicked" from="VBoxContainer/ScrollContainer/VBoxContainer/DueList" to="." method="_on_due_list_item_clicked"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/Back" to="." method="_on_back_pressed"]
