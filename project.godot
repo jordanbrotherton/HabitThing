@@ -13,7 +13,7 @@ config_version=5
 config/name="HabitThing"
 run/main_scene="uid://sr3vpk63ovfn"
 config/features=PackedStringArray("4.5")
-config/icon="res://icon.svg"
+config/icon="uid://dmsn50ddnlv6f"
 
 [display]
 
