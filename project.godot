@@ -11,15 +11,30 @@ config_version=5
 [application]
 
 config/name="HabitThing"
+run/main_scene="uid://sr3vpk63ovfn"
 config/features=PackedStringArray("4.5")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=360
+window/size/viewport_height=640
+window/stretch/mode="viewport"
+window/stretch/aspect="expand"
+window/handheld/orientation=6
 
 [editor]
 
 version_control/plugin_name="GitPlugin"
 version_control/autoload_on_startup=true
 
+[gui]
+
+theme/custom="uid://bbdjky584xraq"
+
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="mobile"
+textures/vram_compression/import_etc2_astc=true
+environment/defaults/default_clear_color=Color(0.808544, 0.91347086, 0.9999998, 1)

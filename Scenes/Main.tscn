@@ -1,0 +1,116 @@
+[gd_scene load_steps=7 format=3 uid="uid://sr3vpk63ovfn"]
+
+[ext_resource type="Script" uid="uid://dbj4bu62lefqy" path="res://Scripts/SceneControllers/MainScreen.gd" id="1_r150o"]
+[ext_resource type="Theme" uid="uid://bbdjky584xraq" path="res://Theme.tres" id="2_idj7w"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_rxg2q"]
+size = Vector2(128, 128)
+
+[sub_resource type="LabelSettings" id="LabelSettings_uu6xs"]
+font_size = 48
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_rxg2q"]
+font_size = 32
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_glv2v"]
+font_color = Color(0, 0, 0, 1)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_r150o")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 68)
+layout_mode = 2
+color = Color(0, 0.7529412, 1, 1)
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+texture = SubResource("PlaceholderTexture2D_rxg2q")
+stretch_mode = 3
+
+[node name="Streak" type="Label" parent="VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+text = "0 Days"
+label_settings = SubResource("LabelSettings_uu6xs")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DueLabel" type="Label" parent="VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+text = "Due Tasks"
+label_settings = SubResource("LabelSettings_rxg2q")
+
+[node name="DueList" type="ItemList" parent="VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_idj7w")
+auto_height = true
+item_count = 2
+item_0/text = "Placeholder"
+item_1/text = "Please actually load dynamically"
+
+[node name="CompleteLabel" type="Label" parent="VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+text = "Completed Tasks"
+label_settings = SubResource("LabelSettings_glv2v")
+
+[node name="CompleteList" type="ItemList" parent="VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_idj7w")
+auto_height = true
+item_count = 5
+item_0/text = "Placeholder"
+item_1/text = "Please actually load dynamically"
+item_2/text = "Eat food"
+item_3/text = "Go for a walk"
+item_4/text = "Placeholders"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+alignment = 1
+
+[node name="AddTask" type="Button" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("2_idj7w")
+text = "Add Task"
+
+[node name="Shop" type="Button" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("2_idj7w")
+text = "Hatpedia"
+
+[node name="Stats" type="Button" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("2_idj7w")
+text = "Stats"
+
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/AddTask" to="." method="_on_add_clicked"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/Shop" to="." method="_on_shop_clicked"]

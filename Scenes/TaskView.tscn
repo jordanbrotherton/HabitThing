@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://sr3vpk63ovfn"]
+[gd_scene format=3 uid="uid://bvdfaq4hir1pa"]
 
-[node name="Control" type="Control"]
+[node name="TaskView" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
