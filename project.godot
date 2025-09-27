@@ -37,4 +37,4 @@ theme/custom="uid://bbdjky584xraq"
 textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="mobile"
 textures/vram_compression/import_etc2_astc=true
-environment/defaults/default_clear_color=Color(0.808544, 0.91347086, 0.9999998, 1)
+environment/defaults/default_clear_color=Color(0.42770323, 0.61469567, 0.9428257, 1)
