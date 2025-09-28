@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=11 format=3 uid="uid://bbdjky584xraq"]
+[gd_resource type="Theme" load_steps=12 format=3 uid="uid://bbdjky584xraq"]
 
 [ext_resource type="FontFile" uid="uid://buafevi11edge" path="res://TTF/Pixeled.ttf" id="1_yd3fu"]
 
@@ -44,6 +44,13 @@ corner_radius_bottom_left = 20
 content_margin_left = 20.0
 content_margin_right = 20.0
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7yw46"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
 [resource]
 default_font = ExtResource("1_yd3fu")
 default_font_size = 10
@@ -62,6 +69,7 @@ CheckButton/styles/normal = SubResource("StyleBoxFlat_c6xh3")
 CheckButton/styles/pressed = SubResource("StyleBoxFlat_t6dyh")
 ItemList/colors/font_color = Color(0.23934695, 0.23934722, 0.23934704, 1)
 ItemList/styles/panel = SubResource("StyleBoxFlat_abrne")
+Label/font_sizes/font_size = 10
 Panel/styles/panel = SubResource("StyleBoxFlat_y2aw4")
 ScrollContainer/styles/panel = SubResource("StyleBoxEmpty_abrne")
 TextEdit/colors/background_color = Color(1, 1, 1, 1)
@@ -85,5 +93,5 @@ TextEdit/fonts/font = ExtResource("1_yd3fu")
 TextEdit/icons/space = null
 TextEdit/icons/tab = null
 TextEdit/styles/focus = null
-TextEdit/styles/normal = null
+TextEdit/styles/normal = SubResource("StyleBoxFlat_7yw46")
 TextEdit/styles/read_only = null
