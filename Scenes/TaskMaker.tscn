@@ -1,4 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://072wye2o7qub"]
+[gd_scene load_steps=7 format=3 uid="uid://072wye2o7qub"]
+
+[ext_resource type="Script" uid="uid://dyr1u2iclic5n" path="res://Scripts/SceneControllers/cancel_button.gd" id="1_2g0e1"]
 
 [sub_resource type="Theme" id="Theme_jvtbt"]
 
@@ -174,8 +176,11 @@ alignment = 1
 layout_mode = 2
 size_flags_horizontal = 3
 text = "CANCEL"
+script = ExtResource("1_2g0e1")
 
 [node name="AddButton" type="Button" parent="HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "ADD"
+
+[connection signal="pressed" from="HBoxContainer/CancelButton" to="HBoxContainer/CancelButton" method="_on_pressed"]

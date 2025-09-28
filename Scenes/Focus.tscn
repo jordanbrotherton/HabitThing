@@ -1,8 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://bos5xqgxvn2j8"]
+[gd_scene load_steps=4 format=3 uid="uid://cidgrfp70y8km"]
 
-[ext_resource type="Texture2D" uid="uid://dshvad4mx1bgh" path="res://Assets/Progress_full.png" id="1_pvps4"]
-[ext_resource type="Texture2D" uid="uid://eepjoirrqolt" path="res://Assets/Progress_empty.png" id="2_286mi"]
-[ext_resource type="Texture2D" uid="uid://47khjtf276io" path="res://lilguy/sleeping/sleeping.tres" id="3_286mi"]
+[ext_resource type="Texture2D" uid="uid://47khjtf276io" path="res://lilguy/sleeping/sleeping.tres" id="1_ossh4"]
+[ext_resource type="Texture2D" uid="uid://dshvad4mx1bgh" path="res://Assets/Progress_full.png" id="2_bwkbx"]
+[ext_resource type="Texture2D" uid="uid://eepjoirrqolt" path="res://Assets/Progress_empty.png" id="3_o0ysn"]
 
 [node name="Focus" type="Control"]
 layout_mode = 3
@@ -36,7 +36,7 @@ offset_top = 315.0
 offset_right = 136.0
 offset_bottom = 355.0
 scale = Vector2(4.7569284, 4.7569284)
-texture = ExtResource("3_286mi")
+texture = ExtResource("1_ossh4")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 0
@@ -65,5 +65,5 @@ scale = Vector2(0.12421474, 0.12421474)
 size_flags_horizontal = 4
 size_flags_vertical = 6
 fill_mode = 5
-texture_under = ExtResource("1_pvps4")
-texture_progress = ExtResource("2_286mi")
+texture_under = ExtResource("2_bwkbx")
+texture_progress = ExtResource("3_o0ysn")
