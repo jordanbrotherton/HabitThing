@@ -4,6 +4,7 @@ var task_index = 0
 var isCompleteIndex = false
 
 func _ready() -> void:
+	$VBoxContainer/ScrollContainer/VBoxContainer/TextureRect.texture = load(ControlsData.currHat)
 	$VBoxContainer/ScrollContainer/VBoxContainer/DueList.clear()
 	$VBoxContainer/ScrollContainer/VBoxContainer/CompleteList.clear()
 	$TaskD/Transperancy.visible = false
@@ -94,6 +95,3 @@ func _on_complete_list_item_clicked(index: int, at_position: Vector2, mouse_butt
 			$TaskD/Focus.visible = false
 			$TaskD/TaskN.visible = true
 			$TaskD/TaskN3.visible = true
-
-func _on_texture_rect_ready() -> void:
-	$VBoxContainer/ScrollContainer/VBoxContainer/TextureRect.texture = load(ControlsData.currHat)
