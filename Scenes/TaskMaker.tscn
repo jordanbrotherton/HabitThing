@@ -1,4 +1,6 @@
-[gd_scene load_steps=9 format=3 uid="uid://072wye2o7qub"]
+[gd_scene load_steps=10 format=3 uid="uid://072wye2o7qub"]
+
+[ext_resource type="Script" uid="uid://btg6mjecga2wd" path="res://Scripts/SceneControllers/TaskMaker.gd" id="1_2g0e1"]
 
 [sub_resource type="Theme" id="Theme_jvtbt"]
 
@@ -57,6 +59,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_2g0e1")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 custom_minimum_size = Vector2(0, 68)
@@ -218,3 +221,6 @@ text = "CANCEL"
 layout_mode = 2
 size_flags_horizontal = 3
 text = "ADD"
+
+[connection signal="pressed" from="HBoxContainer/CancelButton" to="." method="_on_cancel_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/AddButton" to="." method="_on_add_button_pressed"]
