@@ -16,3 +16,10 @@ func _on_focus_check_toggled(toggled_on: bool) -> void:
 	else:
 		$VBoxContainer/HBoxContainer.visible = false
 
+
+
+func _on_repeat_toggled(toggled_on: bool) -> void:
+	if toggled_on:
+		$VBoxContainer/HBoxContainer2.visible = true
+	else:
+		$VBoxContainer/HBoxContainer2.visible = false
