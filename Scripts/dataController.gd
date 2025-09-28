@@ -19,7 +19,10 @@ func load_data():
 		for task in saveJSON["tasks"]:
 			var t = Task.new("", "", false, 0, 0, 0, 0)
 			t.fromDict(task);
-			tasksList.append(t)
+			if(task["isCompleted"]):
+				completedTasksList.append(t)
+			else:
+				tasksList.append(t)
 		hatsOwned = saveJSON["hatsOwned"]
 
 func save_data():
