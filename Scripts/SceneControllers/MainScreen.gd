@@ -22,11 +22,10 @@ func _on_add_clicked() -> void:
 func _on_shop_clicked() -> void:
 	get_tree().change_scene_to_file("res://Scenes/Shop.tscn")
 
-
 func _on_stats_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scenes/Stats.tscn")
 
-<<<<<<< HEAD
+
 func _on_due_list_item_clicked(index: int, at_position: Vector2, mouse_button_index: int) -> void:
 		if(mouse_button_index == MOUSE_BUTTON_LEFT):
 			task_index = index
@@ -75,8 +74,6 @@ func _on_complete_list_item_clicked(index: int, at_position: Vector2, mouse_butt
 			$TaskD/Focus.visible = true
 			$TaskD/TaskN.visible = true
 			$TaskD/TaskN3.visible = true
-=======
 
 func _on_texture_rect_ready() -> void:
 	$VBoxContainer/ScrollContainer/VBoxContainer/TextureRect.texture = load(ControlsData.currHat)
->>>>>>> c7ab311588a0d931042ed298d4ddf98e817d5c90
