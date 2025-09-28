@@ -1,8 +1,33 @@
-[gd_scene load_steps=6 format=3 uid="uid://072wye2o7qub"]
+[gd_scene load_steps=9 format=3 uid="uid://072wye2o7qub"]
 
 [sub_resource type="Theme" id="Theme_jvtbt"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jvtbt"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rbfbs"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tsqrs"]
+bg_color = Color(1, 1, 1, 0)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="Theme" id="Theme_tsqrs"]
+Panel/styles/panel = SubResource("StyleBoxFlat_rbfbs")
+TextEdit/colors/background_color = Color(0, 0, 0, 0)
+TextEdit/colors/font_color = Color(0.18039216, 0.38039216, 0.77254903, 1)
+TextEdit/styles/normal = SubResource("StyleBoxFlat_tsqrs")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2g0e1"]
 bg_color = Color(1, 1, 1, 1)
@@ -56,6 +81,7 @@ text = "ADD TASK"
 horizontal_alignment = 1
 
 [node name="Panel" type="Panel" parent="."]
+custom_minimum_size = Vector2(0, 32)
 layout_mode = 1
 anchors_preset = 14
 anchor_top = 0.5
@@ -67,6 +93,19 @@ offset_bottom = 166.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = SubResource("Theme_jvtbt")
+
+[node name="Panel2" type="Panel" parent="."]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -94.0
+offset_bottom = -62.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_jvtbt")
 
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
 layout_mode = 1
@@ -85,18 +124,17 @@ offset_bottom = 40.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="TextEdit" type="TextEdit" parent="VBoxContainer"]
+[node name="Task Name" type="TextEdit" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 32)
 layout_mode = 2
-placeholder_text = "Task Name"
-
-[node name="TaskName" type="TextEdit" parent="VBoxContainer"]
-custom_minimum_size = Vector2(0, 45)
-layout_mode = 2
+theme = SubResource("Theme_tsqrs")
 theme_override_colors/font_color = Color(0.18039216, 0.38039216, 0.77254903, 1)
-theme_override_styles/normal = SubResource("StyleBoxFlat_jvtbt")
-placeholder_text = " Task Name"
+theme_override_colors/font_readonly_color = Color(0.18039216, 0.38039216, 0.77254903, 1)
+theme_override_colors/font_placeholder_color = Color(0.18039216, 0.38039216, 0.77254903, 1)
+placeholder_text = "  Task Name"
 
 [node name="FocusCheck" type="CheckButton" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 32)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.18039216, 0.38039216, 0.77254903, 1)
 theme_override_styles/normal = SubResource("StyleBoxFlat_2g0e1")
@@ -127,6 +165,7 @@ layout_mode = 2
 text = "mins"
 
 [node name="Repeat" type="CheckButton" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 32)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.18039216, 0.38039216, 0.77254903, 1)
 theme_override_styles/normal = SubResource("StyleBoxFlat_87r46")
