@@ -9,7 +9,6 @@ font_size = 48
 font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_rxg2q"]
-font_size = 32
 font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_glv2v"]
