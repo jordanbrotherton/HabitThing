@@ -1,28 +1,28 @@
 {
   "hats": [
-    {
-      "name": "Halo",
-      "cost": 5,
-      "rarity": "Common",
-      "path": "res://lilguy/halo/halo.tres"
-    },
-    {
-      "name": "Wizard",
-      "cost": 10,
-      "rarity": "Rare",
-      "path": "res://lilguy/wizard/wizard.tres"
-    },
-    {
-      "name": "Pirate",
-      "cost": 15,
-      "rarity": "Epic",
-      "path": "res://lilguy/pirate/pirate.tres"
-    },
-    {
-      "name": "Transparent",
-      "cost": 20,
-      "rarity": "Legendary",
-      "path": "res://lilguy/transparent/transparent.tres"
-    }
+	{
+	  "name": "Halo",
+	  "cost": 5,
+	  "rarity": "Common",
+	  "path": "res://lilguy/halo/halo.tres"
+	},
+	{
+	  "name": "Wizard",
+	  "cost": 10,
+	  "rarity": "Rare",
+	  "path": "res://lilguy/wizard/wizard.tres"
+	},
+	{
+	  "name": "Pirate",
+	  "cost": 15,
+	  "rarity": "Epic",
+	  "path": "res://lilguy/pirate/pirate.tres"
+	},
+	{
+	  "name": "Transparent",
+	  "cost": 20,
+	  "rarity": "Legendary",
+	  "path": "res://lilguy/transparent/transparent.tres"
+	}
   ]
 }

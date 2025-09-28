@@ -15,6 +15,10 @@ run/main_scene="uid://sr3vpk63ovfn"
 config/features=PackedStringArray("4.5")
 config/icon="uid://dmsn50ddnlv6f"
 
+[autoload]
+
+ControlsData="*res://Scripts/dataController.gd"
+
 [display]
 
 window/size/viewport_width=360
