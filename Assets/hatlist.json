@@ -12,21 +12,21 @@
 	  "cost": 10,
 	  "rarity": "Rare",
 	  "path": "res://lilguy/wizard/wizard.tres",
-	  "desc": ""
+	  "desc": "L'il Guy the Blue demands that YOU SHALL NOT PASS!... until you finish your daily tasks, at least!"
 	},
 	{
 	  "name": "Pirate",
 	  "cost": 15,
 	  "rarity": "Epic",
 	  "path": "res://lilguy/pirate/pirate.tres",
-	  "desc": ""
+	  "desc": "L'il Guy is just missing one piece of his crew to make him the most successful Pirate King to ever live."
 	},
 	{
-	  "name": "Transparent",
+	  "name": "???",
 	  "cost": 20,
 	  "rarity": "Legendary",
-	  "path": "res://lilguy/transparent/transparent.tres",
-	  "desc": ""
+	  "path": "res://lilguy/question/question.tres",
+	  "desc": "L'il Guy has mastered the boundaries of his realm, and found a way to harness the empty space into a nice little... what is it?"
 	}
   ]
 }

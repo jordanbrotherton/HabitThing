@@ -11,6 +11,7 @@ func _ready() -> void:
 	$HatInfo/HatName.visible = false
 	$HatInfo/Sheet/Animation.visible = false
 	$HatInfo/Description.visible = false
+	$HatInfo/Rarity.visible = false
 	$HatInfo/XButton.visible = false
 	$HatInfo/Left.visible = false
 	$HatInfo/Right.visible = false
@@ -28,6 +29,7 @@ func _on_due_list_item_clicked(i: int, at_position: Vector2, mouse_button_index:
 		$HatInfo/HatName.visible = true
 		$HatInfo/Sheet/Animation.visible = true
 		$HatInfo/Description.visible = true
+		$HatInfo/Rarity.visible = true
 		$HatInfo/XButton.visible = true
 		$HatInfo/Left.visible = true
 		$HatInfo/Right.visible = true
@@ -36,6 +38,7 @@ func set_hat_name(num):
 	$HatInfo/HatName.text = ControlsData.hatDatabase[num - 1].hatName
 	var a = load(ControlsData.hatDatabase[num - 1].spritePath)
 	$HatInfo/Sheet/Animation.texture = a
+	$HatInfo/Rarity.text = ControlsData.hatDatabase[num - 1].hatRar
 	$HatInfo/Description.text = ControlsData.hatDatabase[num - 1].hatDesc
 
 func _on_x_pressed() -> void:
@@ -43,6 +46,7 @@ func _on_x_pressed() -> void:
 	$HatInfo/Sheet.visible = false
 	$HatInfo/HatName.visible = false
 	$HatInfo/Sheet/Animation.visible = false
+	$HatInfo/Rarity.visible = false
 	$HatInfo/Description.visible = false
 	$HatInfo/XButton.visible = false
 	$HatInfo/Left.visible = false

@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://cgya26acvym8i"]
+[gd_scene load_steps=9 format=3 uid="uid://cgya26acvym8i"]
 
 [ext_resource type="Theme" uid="uid://bbdjky584xraq" path="res://Theme.tres" id="1_kjfcx"]
 [ext_resource type="Script" uid="uid://dyth805qvn3s8" path="res://Scripts/SceneControllers/Shop.gd" id="1_wndna"]
@@ -20,6 +20,10 @@ bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lagin"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="LabelSettings" id="LabelSettings_i4qx4"]
+font_size = 10
+font_color = Color(0, 0, 0, 1)
 
 [node name="Shop" type="Control"]
 layout_mode = 3
@@ -104,14 +108,14 @@ color = Color(0.8732984, 0.8732984, 0.8732984, 0.9411765)
 [node name="Animation" type="TextureRect" parent="HatInfo/Sheet"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.245
-anchor_top = 0.164
-anchor_right = 0.77400005
-anchor_bottom = 0.41400003
-offset_left = 0.054992676
-offset_top = -0.116004944
-offset_right = -0.014007568
-offset_bottom = 0.13398743
+anchor_left = 0.23
+anchor_top = 0.187
+anchor_right = 0.75500005
+anchor_bottom = 0.437
+offset_left = -1.0300026
+offset_top = -0.053001404
+offset_right = -0.055007935
+offset_bottom = 0.19699097
 grow_horizontal = 2
 grow_vertical = 2
 stretch_mode = 5
@@ -182,6 +186,19 @@ offset_bottom = 0.23995972
 theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxFlat_lagin")
 text = ">"
+
+[node name="Rarity" type="Label" parent="HatInfo"]
+anchors_preset = -1
+anchor_left = 0.347
+anchor_top = 0.231
+anchor_right = 0.64400005
+anchor_bottom = 0.289
+offset_left = 0.08000183
+offset_top = 0.16000366
+offset_right = 0.15997314
+offset_bottom = 0.039993286
+label_settings = SubResource("LabelSettings_i4qx4")
+horizontal_alignment = 1
 
 [connection signal="item_clicked" from="VBoxContainer/ScrollContainer/VBoxContainer/DueList" to="." method="_on_due_list_item_clicked"]
 [connection signal="ready" from="VBoxContainer/ScrollContainer/VBoxContainer/DueList" to="." method="_on_due_list_ready"]
