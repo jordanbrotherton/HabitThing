@@ -20,6 +20,7 @@ func _ready() -> void:
 		$VBoxContainer/ScrollContainer/VBoxContainer/CompleteList.add_item(task.taskName)
 	for task in ControlsData.tasksList:
 		$VBoxContainer/ScrollContainer/VBoxContainer/DueList.add_item(task.taskName)
+	$VBoxContainer/ScrollContainer/VBoxContainer/Streak.text = str(int(ControlsData.streak)) + " Days"
 
 func _on_add_clicked() -> void:
 	get_tree().change_scene_to_file("res://Scenes/TaskMaker.tscn")

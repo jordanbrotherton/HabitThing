@@ -1,6 +1,7 @@
 class_name DataController extends Node
 
 var streak = 0;
+var streakStart = Time.get_datetime_dict_from_system()
 var tasksCompleted = 0;
 var tasksList = []
 var completedTasksList = []
@@ -11,15 +12,20 @@ var hatDatabase = []
 var currHat = "res://lilguy/base/base.tres"
 
 func load_data():
+	streakStart = Time.get_datetime_dict_from_system()
 	var savePath = FileAccess.open("user://save.json", FileAccess.READ)
 	if(savePath != null):
 		var saveData = savePath.get_line()
 		var saveJSON = JSON.parse_string(saveData)
 		tasksCompleted = saveJSON["tasksCompleted"]
+		if streakStart in saveJSON:
+			streakStart = saveJSON["streakStart"]
 		streak = saveJSON["streak"]
 		for task in saveJSON["tasks"]:
 			var t = Task.new("", "", false, 0, 0, 0, 0)
-			t.fromDict(task);
+			var o = t.fromDict(task, streakStart);
+			if(o != 0):
+				streakStart = o
 			if(task["isCompleted"]):
 				completedTasksList.append(t)
 			else:
@@ -36,6 +42,7 @@ func save_data():
 		"streak" : streak,
 		"tasksCompleted": tasksCompleted,
 		"tasks" : taskArr,
+		"streakStart": streakStart,
 		"hatsOwned": hatsOwned
 	}
 	var saveData = JSON.stringify(saveDict)
