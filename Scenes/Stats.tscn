@@ -20,65 +20,109 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -1.0
-offset_top = 16.0
-offset_right = 4931.533
-offset_bottom = 8572.154
+offset_left = -2.0
+offset_top = 3.999998
+offset_right = 4930.533
+offset_bottom = 8560.154
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.07257934, 0.07257934)
 
 [node name="ColorRect7" type="ColorRect" parent="."]
-layout_mode = 0
-offset_left = 33.0
-offset_top = 119.0
-offset_right = 337.0
-offset_bottom = 167.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 32.0
+offset_top = 118.0
+offset_right = 336.0
+offset_bottom = 166.0
+grow_horizontal = 2
+grow_vertical = 2
 color = Color(0.18039216, 0.38039216, 0.77254903, 1)
 
 [node name="ColorRect" type="ColorRect" parent="."]
-layout_mode = 0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
 offset_left = 38.0
 offset_top = 122.0
 offset_right = 331.0
 offset_bottom = 162.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="ColorRect6" type="ColorRect" parent="."]
-layout_mode = 0
-offset_left = 33.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 32.0
 offset_top = 219.0
-offset_right = 337.0
+offset_right = 336.0
 offset_bottom = 267.0
+grow_horizontal = 2
+grow_vertical = 2
 color = Color(0.18039216, 0.38039216, 0.77254903, 1)
 
 [node name="ColorRect2" type="ColorRect" parent="."]
-layout_mode = 0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
 offset_left = 38.0
 offset_top = 223.0
 offset_right = 331.0
 offset_bottom = 263.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="ColorRect5" type="ColorRect" parent="."]
-layout_mode = 0
-offset_left = 33.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 32.0
 offset_top = 320.0
-offset_right = 337.0
+offset_right = 336.0
 offset_bottom = 368.0
+grow_horizontal = 2
+grow_vertical = 2
 color = Color(0.18039216, 0.38039216, 0.77254903, 1)
 
 [node name="ColorRect3" type="ColorRect" parent="."]
-layout_mode = 0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
 offset_left = 38.0
 offset_top = 324.0
 offset_right = 331.0
 offset_bottom = 364.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="ColorRect4" type="ColorRect" parent="."]
 custom_minimum_size = Vector2(0, 68)
-layout_mode = 0
-offset_left = -1.0
-offset_right = 361.0
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_right = 362.0
 offset_bottom = 68.0
+grow_horizontal = 2
 color = Color(0.18039216, 0.38039216, 0.77254903, 1)
 
 [node name="Label" type="Label" parent="."]
@@ -96,44 +140,79 @@ text = "STATS"
 horizontal_alignment = 1
 
 [node name="Return_to_Main" type="Button" parent="."]
-layout_mode = 0
-offset_top = 602.0
-offset_right = 360.0
-offset_bottom = 640.0
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = 606.0
+offset_right = 363.0
+offset_bottom = 644.0
+grow_horizontal = 2
+grow_vertical = 0
 size_flags_horizontal = 3
 theme = ExtResource("1_vnsho")
 text = "RETURN"
 
 [node name="TextureRect" type="TextureRect" parent="."]
-layout_mode = 0
-offset_left = 134.0
-offset_top = 504.0
-offset_right = 229.0
-offset_bottom = 600.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 136.0
+offset_top = 510.0
+offset_right = 231.0
+offset_bottom = 606.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("3_kgfbh")
 
 [node name="Label2" type="Label" parent="."]
-layout_mode = 0
-offset_left = 37.0
-offset_top = 93.0
-offset_right = 204.0
-offset_bottom = 116.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 34.0
+offset_top = 91.0
+offset_right = 226.0
+offset_bottom = 119.0
+grow_horizontal = 2
+grow_vertical = 2
 text = "Total Tasks Completed"
 
 [node name="Label3" type="Label" parent="."]
-layout_mode = 0
-offset_left = 37.0
-offset_top = 195.0
-offset_right = 204.0
-offset_bottom = 218.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 39.0
+offset_top = 194.0
+offset_right = 207.0
+offset_bottom = 222.0
+grow_horizontal = 2
+grow_vertical = 2
 text = "Total Hats Acquired"
 
 [node name="Label4" type="Label" parent="."]
-layout_mode = 0
-offset_left = 37.0
-offset_top = 295.0
-offset_right = 204.0
-offset_bottom = 318.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 38.0
+offset_top = 293.0
+offset_right = 205.0
+offset_bottom = 321.0
+grow_horizontal = 2
+grow_vertical = 2
 text = "Total Focus Time"
 
 [connection signal="pressed" from="Return_to_Main" to="." method="_on_return_to_main_pressed"]

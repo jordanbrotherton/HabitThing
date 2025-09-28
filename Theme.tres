@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=12 format=3 uid="uid://bbdjky584xraq"]
+[gd_resource type="Theme" load_steps=21 format=3 uid="uid://bbdjky584xraq"]
 
 [ext_resource type="FontFile" uid="uid://buafevi11edge" path="res://TTF/Pixeled.ttf" id="1_yd3fu"]
 
@@ -19,12 +19,53 @@ bg_color = Color(2.0214916e-06, 0.46564102, 0.6248467, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j4jqe"]
 bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k4w01"]
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dgat3"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c6xh3"]
 bg_color = Color(0.9955804, 0.99558026, 0.99558026, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t6dyh"]
-bg_color = Color(0.42922115, 0.61182237, 0.95265096, 1)
+bg_color = Color(1, 1, 1, 1)
+border_color = Color(0.8, 0.8, 0.8, 0)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6fgxc"]
+bg_color = Color(1, 1, 1, 0)
+border_color = Color(0.8, 0.8, 0.8, 0)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nf2d2"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_abrne"]
 bg_color = Color(1, 1, 1, 1)
@@ -32,6 +73,39 @@ corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jen6w"]
+bg_color = Color(0.33333334, 0.5372549, 0.9254902, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mjj3v"]
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pbekh"]
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aaj5n"]
+bg_color = Color(0.33333334, 0.5372549, 0.9254902, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yc1e8"]
+bg_color = Color(0.33333334, 0.5372549, 0.9254902, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y2aw4"]
 bg_color = Color(0.18039216, 0.38039216, 0.77254903, 1)
@@ -63,13 +137,38 @@ Button/fonts/font = ExtResource("1_yd3fu")
 Button/styles/hover = SubResource("StyleBoxFlat_23v3e")
 Button/styles/normal = SubResource("StyleBoxFlat_yd3fu")
 Button/styles/pressed = SubResource("StyleBoxFlat_k1aya")
+CheckButton/colors/button_checked_color = Color(0.18039216, 0.38039216, 0.77254903, 1)
+CheckButton/colors/button_unchecked_color = Color(0.71838135, 0.71838135, 0.71838135, 1)
+CheckButton/colors/font_color = Color(0.18039216, 0.38039216, 0.77254903, 1)
+CheckButton/colors/font_focus_color = Color(0.18039216, 0.38039216, 0.77254903, 1)
+CheckButton/colors/font_hover_color = Color(0.18039216, 0.38039216, 0.77254903, 1)
+CheckButton/colors/font_hover_pressed_color = Color(0.18039216, 0.38039216, 0.77254903, 1)
+CheckButton/colors/font_outline_color = Color(0.18039216, 0.38039216, 0.77254903, 1)
+CheckButton/colors/font_pressed_color = Color(0.18039216, 0.38039216, 0.77254903, 1)
 CheckButton/fonts/font = ExtResource("1_yd3fu")
 CheckButton/styles/focus = SubResource("StyleBoxFlat_j4jqe")
+CheckButton/styles/hover = SubResource("StyleBoxFlat_k4w01")
+CheckButton/styles/hover_pressed = SubResource("StyleBoxFlat_dgat3")
 CheckButton/styles/normal = SubResource("StyleBoxFlat_c6xh3")
 CheckButton/styles/pressed = SubResource("StyleBoxFlat_t6dyh")
-ItemList/colors/font_color = Color(0.23934695, 0.23934722, 0.23934704, 1)
+ItemList/colors/font_color = Color(0.18039216, 0.38039216, 0.77254903, 1)
+ItemList/colors/font_hovered_color = Color(0.08266363, 0.21399525, 0.47274816, 1)
+ItemList/colors/font_hovered_selected_color = Color(0.18039216, 0.38039216, 0.77254903, 1)
+ItemList/colors/font_selected_color = Color(0.18039216, 0.38039216, 0.77254903, 1)
+ItemList/colors/guide_color = Color(0.18039216, 0.38039216, 0.77254903, 1)
+ItemList/styles/focus = SubResource("StyleBoxFlat_6fgxc")
+ItemList/styles/hovered = SubResource("StyleBoxFlat_nf2d2")
 ItemList/styles/panel = SubResource("StyleBoxFlat_abrne")
 Label/font_sizes/font_size = 10
+OptionButton/colors/font_color = Color(0.875, 0.875, 0.875, 1)
+OptionButton/colors/font_focus_color = Color(0.95, 0.95, 0.95, 1)
+OptionButton/colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
+OptionButton/colors/font_pressed_color = Color(1, 1, 1, 1)
+OptionButton/styles/focus = SubResource("StyleBoxFlat_jen6w")
+OptionButton/styles/hover = SubResource("StyleBoxFlat_mjj3v")
+OptionButton/styles/hover_pressed = SubResource("StyleBoxFlat_pbekh")
+OptionButton/styles/normal = SubResource("StyleBoxFlat_aaj5n")
+OptionButton/styles/pressed = SubResource("StyleBoxFlat_yc1e8")
 Panel/styles/panel = SubResource("StyleBoxFlat_y2aw4")
 ScrollContainer/styles/panel = SubResource("StyleBoxEmpty_abrne")
 TextEdit/colors/background_color = Color(1, 1, 1, 1)

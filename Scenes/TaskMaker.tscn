@@ -183,8 +183,12 @@ layout_mode = 2
 text = "times  "
 
 [node name="OptionButton" type="OptionButton" parent="VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxFlat_n43h0")
+alignment = 1
+selected = 0
+allow_reselect = true
 item_count = 4
 popup/item_0/text = "Daily"
 popup/item_0/id = 0
@@ -218,5 +222,6 @@ size_flags_horizontal = 3
 text = "ADD"
 
 [connection signal="toggled" from="VBoxContainer/FocusCheck" to="." method="_on_focus_check_toggled"]
+[connection signal="toggled" from="VBoxContainer/Repeat" to="." method="_on_repeat_toggled"]
 [connection signal="pressed" from="HBoxContainer/CancelButton" to="." method="_on_cancel_button_pressed"]
 [connection signal="pressed" from="HBoxContainer/AddButton" to="." method="_on_add_button_pressed"]
