@@ -11,7 +11,11 @@ func _ready() -> void:
 	$TaskD/Panel.visible = false
 	$TaskD/X_button.visible = false
 	$TaskD/Focus.visible = false
-	$TaskD/TaskN3.visible = false
+	$TaskD/Panel3.visible = false
+	$TaskD/TaskN.visible = false
+	$TaskD/Panel2.visible = false
+	$TaskD/DescLabel.visible = false
+	$TaskD/TaskDescription.visible = false
 	for task in ControlsData.completedTasksList:
 		$VBoxContainer/ScrollContainer/VBoxContainer/CompleteList.add_item(task.taskName)
 	for task in ControlsData.tasksList:
@@ -39,29 +43,35 @@ func _on_due_list_item_clicked(index: int, at_position: Vector2, mouse_button_in
 			$TaskD/Panel.visible = true
 			$TaskD/X_button.visible = true
 			$TaskD/Focus.visible = true
+			$TaskD/Panel3.visible = true
 			$TaskD/TaskN.visible = true
-			$TaskD/TaskN3.visible = true
+			$TaskD/Panel2.visible = true
+			$TaskD/DescLabel.visible = true
+			$TaskD/TaskDescription.visible = true
 
 func set_description(num):
 	if(isCompleteIndex):
 		$TaskD/TaskN.text = ControlsData.completedTasksList[num].taskName
-		$TaskD/TaskN2.text = ControlsData.completedTasksList[num].taskDescription
+		$TaskD/DescLabel.text = ControlsData.completedTasksList[num].taskDescription
 	else:
 		if(ControlsData.tasksList[num].isFocus):
 			$TaskD/Focus.text = "Focus"
 		else:
 			$TaskD/Focus.text = "Mark as Complete"
 		$TaskD/TaskN.text = ControlsData.tasksList[num].taskName
-		$TaskD/TaskN2.text = ControlsData.tasksList[num].taskDescription
+		$TaskD/DescLabel.text = ControlsData.tasksList[num].taskDescription
+			
 
 func _on_x_button_pressed() -> void:
 	$TaskD/Transperancy.visible = false
 	$TaskD/Panel.visible = false
 	$TaskD/X_button.visible = false
 	$TaskD/Focus.visible = false
+	$TaskD/Panel3.visible = false
 	$TaskD/TaskN.visible = false
-	$TaskD/TaskN2.visible = false
-	$TaskD/TaskN3.visible = false
+	$TaskD/Panel2.visible = false
+	$TaskD/DescLabel.visible = false
+	$TaskD/TaskDescription.visible = false
 
 
 func _on_focus_pressed() -> void:
@@ -70,8 +80,8 @@ func _on_focus_pressed() -> void:
 	$TaskD/X_button.visible = false
 	$TaskD/Focus.visible = false
 	$TaskD/TaskN.visible = false
-	$TaskD/TaskN2.visible = false
-	$TaskD/TaskN3.visible = false
+	$TaskD/DescLabel.visible = false
+	$TaskD/TaskDescription.visible = false
 	if(ControlsData.tasksList[task_index].isFocus):
 		get_tree().change_scene_to_file("res://Scenes/Focus.tscn")
 	else:
@@ -94,4 +104,5 @@ func _on_complete_list_item_clicked(index: int, at_position: Vector2, mouse_butt
 			$TaskD/X_button.visible = true
 			$TaskD/Focus.visible = false
 			$TaskD/TaskN.visible = true
-			$TaskD/TaskN3.visible = true
+			$TaskD/DescLabel.visible = true
+			$TaskD/TaskDescription.visible = true

@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://sr3vpk63ovfn"]
+[gd_scene load_steps=8 format=3 uid="uid://sr3vpk63ovfn"]
 
 [ext_resource type="Script" uid="uid://dbj4bu62lefqy" path="res://Scripts/SceneControllers/MainScreen.gd" id="1_r150o"]
 [ext_resource type="Theme" uid="uid://bbdjky584xraq" path="res://Theme.tres" id="2_idj7w"]
@@ -13,6 +13,13 @@ font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_glv2v"]
 font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kln2b"]
+bg_color = Color(0.19215687, 0.39607844, 0.79607844, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -113,7 +120,6 @@ text = "Stats"
 script = ExtResource("4_rgh2o")
 
 [node name="TaskD" type="CanvasLayer" parent="."]
-visible = false
 
 [node name="Transperancy" type="ColorRect" parent="TaskD"]
 anchors_preset = 15
@@ -133,6 +139,32 @@ offset_right = -40.0
 offset_bottom = -64.7785
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Panel3" type="Panel" parent="TaskD"]
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 51.0
+offset_top = -228.0
+offset_right = -52.0
+offset_bottom = -150.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_kln2b")
+
+[node name="Panel2" type="Panel" parent="TaskD"]
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 50.0
+offset_top = -111.0
+offset_right = -51.0
+offset_bottom = 85.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_kln2b")
 
 [node name="X_button" type="Button" parent="TaskD"]
 anchors_preset = 15
@@ -162,37 +194,37 @@ text = "Focus"
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 84.0
-offset_top = 75.0
-offset_right = -75.0
-offset_bottom = -519.0
+offset_left = 77.0
+offset_top = 106.0
+offset_right = -82.0
+offset_bottom = -488.0
 grow_horizontal = 2
 grow_vertical = 2
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="TaskN2" type="Label" parent="TaskD"]
+[node name="DescLabel" type="Label" parent="TaskD"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 41.0
-offset_top = 226.0
-offset_right = -44.0
-offset_bottom = -86.0
+offset_left = 57.0
+offset_top = 217.0
+offset_right = -60.0
+offset_bottom = -241.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 16
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="TaskN3" type="Label" parent="TaskD"]
+[node name="TaskDescription" type="Label" parent="TaskD"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 53.0
-offset_top = 177.0
+offset_top = 164.0
 offset_right = -126.0
-offset_bottom = -405.0
+offset_bottom = -418.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 10
@@ -205,5 +237,5 @@ vertical_alignment = 1
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/Shop" to="." method="_on_shop_clicked"]
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/Stats" to="." method="_on_stats_pressed"]
 [connection signal="pressed" from="TaskD/X_button" to="." method="_on_x_button_pressed"]
-[connection signal="pressed" from="TaskD/Focus" to="." method="_on_x_button_pressed"]
 [connection signal="pressed" from="TaskD/Focus" to="." method="_on_focus_pressed"]
+[connection signal="pressed" from="TaskD/Focus" to="." method="_on_x_button_pressed"]
