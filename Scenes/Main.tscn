@@ -113,6 +113,7 @@ text = "Stats"
 script = ExtResource("4_rgh2o")
 
 [node name="Task Description" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="ColorRect" type="ColorRect" parent="Task Description"]
 anchors_preset = 15
