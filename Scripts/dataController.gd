@@ -8,6 +8,7 @@ var completedTasksList = []
 var hatsOwned = []
 var hatDatabase = []
  
+var currHat = "res://lilguy/base/base.tres"
 
 func load_data():
 	var savePath = FileAccess.open("user://save.json", FileAccess.READ)
@@ -46,6 +47,9 @@ func load_hats():
 		print(hat["name"])
 		var hatEntry = Hat.new(hat["name"], hat["cost"], hat["rarity"], hat["path"],  hat["desc"])
 		hatDatabase.append(hatEntry)
+
+func set_hats(newHat):
+	currHat = newHat;
 
 func _init() -> void:
 	load_hats()
