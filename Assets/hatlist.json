@@ -2,24 +2,28 @@
   "hats": [
 	{
 	  "name": "Halo",
+    "desc": "",
 	  "cost": 5,
 	  "rarity": "Common",
-	  "path": "res://lilguy/halo/halo.tres"
+	  "path": "res://lilguy/angel/angel.tres"
 	},
 	{
 	  "name": "Wizard",
+    "desc": "",
 	  "cost": 10,
 	  "rarity": "Rare",
 	  "path": "res://lilguy/wizard/wizard.tres"
 	},
 	{
 	  "name": "Pirate",
+    "desc": "",
 	  "cost": 15,
 	  "rarity": "Epic",
 	  "path": "res://lilguy/pirate/pirate.tres"
 	},
 	{
 	  "name": "Transparent",
+    "desc": "",
 	  "cost": 20,
 	  "rarity": "Legendary",
 	  "path": "res://lilguy/transparent/transparent.tres"

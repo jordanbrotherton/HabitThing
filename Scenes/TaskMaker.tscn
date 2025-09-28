@@ -97,19 +97,6 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = SubResource("Theme_jvtbt")
 
-[node name="Panel2" type="Panel" parent="."]
-custom_minimum_size = Vector2(0, 32)
-layout_mode = 1
-anchors_preset = 14
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-offset_top = -94.0
-offset_bottom = -62.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_jvtbt")
-
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
 layout_mode = 1
 anchors_preset = 10
@@ -127,9 +114,16 @@ offset_bottom = 40.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Task Name" type="TextEdit" parent="VBoxContainer"]
+[node name="Panel2" type="Panel" parent="VBoxContainer"]
 custom_minimum_size = Vector2(0, 32)
 layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_jvtbt")
+
+[node name="Task Name" type="TextEdit" parent="VBoxContainer/Panel2"]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 0
+offset_right = 360.0
+offset_bottom = 32.0
 theme = SubResource("Theme_tsqrs")
 theme_override_colors/font_color = Color(0.18039216, 0.38039216, 0.77254903, 1)
 theme_override_colors/font_readonly_color = Color(0.18039216, 0.38039216, 0.77254903, 1)
@@ -146,6 +140,7 @@ theme_override_colors/button_unchecked_color = Color(1, 1, 1, 1)
 text = "  Focus Task"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+visible = false
 layout_mode = 2
 alignment = 1
 
@@ -222,5 +217,6 @@ layout_mode = 2
 size_flags_horizontal = 3
 text = "ADD"
 
+[connection signal="toggled" from="VBoxContainer/FocusCheck" to="." method="_on_focus_check_toggled"]
 [connection signal="pressed" from="HBoxContainer/CancelButton" to="." method="_on_cancel_button_pressed"]
 [connection signal="pressed" from="HBoxContainer/AddButton" to="." method="_on_add_button_pressed"]
