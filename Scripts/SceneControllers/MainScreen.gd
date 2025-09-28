@@ -10,6 +10,7 @@ func _ready() -> void:
 	$TaskD/X_button.visible = false
 	$TaskD/Focus.visible = false
 	$TaskD/TaskN3.visible = false
+	$VBoxContainer/ScrollContainer/VBoxContainer/TextureRect.texture = load(ControlsData.currHat)
 	for task in ControlsData.completedTasksList:
 		$VBoxContainer/ScrollContainer/VBoxContainer/CompleteList.add_item(task.taskName)
 	for task in ControlsData.tasksList:
@@ -27,18 +28,18 @@ func _on_stats_pressed() -> void:
 
 
 func _on_due_list_item_clicked(index: int, at_position: Vector2, mouse_button_index: int) -> void:
-		if(mouse_button_index == MOUSE_BUTTON_LEFT):
-			print("hello")
-			task_index = index
-			set_description(task_index)
-			queue_redraw()
-			$TaskD.visible = true
-			$TaskD/Transperancy.visible = true
-			$TaskD/Panel.visible = true
-			$TaskD/X_button.visible = true
-			$TaskD/Focus.visible = true
-			$TaskD/TaskN.visible = true
-			$TaskD/TaskN3.visible = true
+	if(mouse_button_index == MOUSE_BUTTON_LEFT):
+		print("hello")
+		task_index = index
+		set_description(task_index)
+		queue_redraw()
+		$TaskD.visible = true
+		$TaskD/Transperancy.visible = true
+		$TaskD/Panel.visible = true
+		$TaskD/X_button.visible = true
+		$TaskD/Focus.visible = true
+		$TaskD/TaskN.visible = true
+		$TaskD/TaskN3.visible = true
 
 func set_description(num):
 	$TaskD/TaskN.text = ControlsData.tasksList[num].taskName
@@ -64,19 +65,15 @@ func _on_focus_pressed() -> void:
 	$TaskD/TaskN3.visible = false
 	get_tree().change_scene_to_file("res://Scenes/Focus.tscn")
 
-
 func _on_complete_list_item_clicked(index: int, at_position: Vector2, mouse_button_index: int) -> void:
 	if(mouse_button_index == MOUSE_BUTTON_LEFT):
-			task_index = index
-			set_description(task_index)
-			queue_redraw()
-            $TaskD.visible = true
-			$TaskD/Transperancy.visible = true
-			$TaskD/Panel.visible = true
-			$TaskD/X_button.visible = true
-			$TaskD/Focus.visible = true
-			$TaskD/TaskN.visible = true
-			$TaskD/TaskN3.visible = true
-
-func _on_texture_rect_ready() -> void:
-	$VBoxContainer/ScrollContainer/VBoxContainer/TextureRect.texture = load(ControlsData.currHat)
+		task_index = index
+		set_description(task_index)
+		queue_redraw()
+		$TaskD.visible = true
+		$TaskD/Transperancy.visible = true
+		$TaskD/Panel.visible = true
+		$TaskD/X_button.visible = true
+		$TaskD/Focus.visible = true
+		$TaskD/TaskN.visible = true
+		$TaskD/TaskN3.visible = true
