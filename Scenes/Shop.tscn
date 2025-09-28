@@ -200,6 +200,16 @@ offset_bottom = 0.039993286
 label_settings = SubResource("LabelSettings_i4qx4")
 horizontal_alignment = 1
 
+[node name="Set_Default" type="Button" parent="HatInfo"]
+anchors_preset = -1
+anchor_top = 0.94100004
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -0.24005127
+grow_horizontal = 2
+grow_vertical = 0
+text = "Set as Default"
+
 [connection signal="item_clicked" from="VBoxContainer/ScrollContainer/VBoxContainer/DueList" to="." method="_on_due_list_item_clicked"]
 [connection signal="ready" from="VBoxContainer/ScrollContainer/VBoxContainer/DueList" to="." method="_on_due_list_ready"]
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/Back" to="." method="_on_back_pressed"]
@@ -207,3 +217,4 @@ horizontal_alignment = 1
 [connection signal="pressed" from="HatInfo/XButton" to="." method="_on_x_pressed"]
 [connection signal="pressed" from="HatInfo/Left" to="." method="_on_left_pressed"]
 [connection signal="pressed" from="HatInfo/Right" to="." method="_on_right_pressed"]
+[connection signal="pressed" from="HatInfo/Set_Default" to="." method="_on_set_default_pressed"]

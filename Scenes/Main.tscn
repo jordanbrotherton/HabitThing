@@ -1,8 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://sr3vpk63ovfn"]
+[gd_scene load_steps=7 format=3 uid="uid://sr3vpk63ovfn"]
 
 [ext_resource type="Script" uid="uid://dbj4bu62lefqy" path="res://Scripts/SceneControllers/MainScreen.gd" id="1_r150o"]
 [ext_resource type="Theme" uid="uid://bbdjky584xraq" path="res://Theme.tres" id="2_idj7w"]
-[ext_resource type="Texture2D" uid="uid://kddi2ggjj2ja" path="res://lilguy/base/base.tres" id="2_kln2b"]
 [ext_resource type="Script" uid="uid://cvm2vknptglr3" path="res://Scripts/SceneControllers/stats.gd" id="4_rgh2o"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_uu6xs"]
@@ -49,7 +48,6 @@ size_flags_vertical = 3
 [node name="TextureRect" type="TextureRect" parent="VBoxContainer/ScrollContainer/VBoxContainer"]
 custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
-texture = ExtResource("2_kln2b")
 stretch_mode = 5
 
 [node name="Streak" type="Label" parent="VBoxContainer/ScrollContainer/VBoxContainer"]
@@ -114,6 +112,7 @@ theme = ExtResource("2_idj7w")
 text = "Stats"
 script = ExtResource("4_rgh2o")
 
+[connection signal="ready" from="VBoxContainer/ScrollContainer/VBoxContainer/TextureRect" to="." method="_on_texture_rect_ready"]
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/AddTask" to="." method="_on_add_clicked"]
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/Shop" to="." method="_on_shop_clicked"]
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/Stats" to="." method="_on_stats_pressed"]

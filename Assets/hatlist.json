@@ -1,6 +1,13 @@
 {
   "hats": [
 	{
+	  "name": "Hatless",
+	  "cost": 0,
+	  "rarity": "Basic",
+	  "path": "res://lilguy/base/base.tres",
+	  "desc": "L'il Guy without a hat. He's ready to try new things and see how productive you can be every day!"
+	},
+	{
 	  "name": "Halo",
 	  "cost": 5,
 	  "rarity": "Common",
