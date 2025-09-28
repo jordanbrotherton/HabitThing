@@ -3,6 +3,7 @@ class_name DataController extends Node
 var streak = 0;
 var tasksCompleted = 0;
 var tasksList = []
+var completedTasksList = []
 
 var hatsOwned = []
 var hatDatabase = []
