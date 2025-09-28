@@ -28,9 +28,11 @@ func _on_stats_pressed() -> void:
 
 func _on_due_list_item_clicked(index: int, at_position: Vector2, mouse_button_index: int) -> void:
 		if(mouse_button_index == MOUSE_BUTTON_LEFT):
+			print("hello")
 			task_index = index
 			set_description(task_index)
 			queue_redraw()
+			$TaskD.visible = true
 			$TaskD/Transperancy.visible = true
 			$TaskD/Panel.visible = true
 			$TaskD/X_button.visible = true
@@ -68,6 +70,7 @@ func _on_complete_list_item_clicked(index: int, at_position: Vector2, mouse_butt
 			task_index = index
 			set_description(task_index)
 			queue_redraw()
+            $TaskD.visible = true
 			$TaskD/Transperancy.visible = true
 			$TaskD/Panel.visible = true
 			$TaskD/X_button.visible = true

@@ -112,12 +112,8 @@ theme = ExtResource("2_idj7w")
 text = "Stats"
 script = ExtResource("4_rgh2o")
 
-<<<<<<< HEAD
 [node name="TaskD" type="CanvasLayer" parent="."]
-=======
-[node name="Task Description" type="CanvasLayer" parent="."]
 visible = false
->>>>>>> 42f2e0af41c59c10b0f3e943a69bcddca3c1192b
 
 [node name="Transperancy" type="ColorRect" parent="TaskD"]
 anchors_preset = 15
@@ -209,5 +205,5 @@ vertical_alignment = 1
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/Shop" to="." method="_on_shop_clicked"]
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/Stats" to="." method="_on_stats_pressed"]
 [connection signal="pressed" from="TaskD/X_button" to="." method="_on_x_button_pressed"]
-[connection signal="pressed" from="TaskD/Focus" to="." method="_on_focus_pressed"]
 [connection signal="pressed" from="TaskD/Focus" to="." method="_on_x_button_pressed"]
+[connection signal="pressed" from="TaskD/Focus" to="." method="_on_focus_pressed"]
