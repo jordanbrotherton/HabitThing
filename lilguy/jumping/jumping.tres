@@ -10,6 +10,7 @@
 
 [resource]
 frames = 7
+speed_scale = 2.0
 frame_0/texture = ExtResource("1_yikg4")
 frame_1/texture = ExtResource("2_lsbwm")
 frame_1/duration = 1.0

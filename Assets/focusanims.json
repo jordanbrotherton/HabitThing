@@ -1,0 +1,16 @@
+{
+  "anims": [
+	{
+        "path": "res://lilguy/sleeping/sleeping.tres"
+	},
+	{
+        "path": "res://lilguy/mitosis/mitosis.tres"
+	},
+	{
+        "path": "res://lilguy/jumping/jumping.tres"
+	},
+	{
+        "path": "res://lilguy/base/base.tres"
+	}
+  ]
+}

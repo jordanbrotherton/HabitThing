@@ -3,6 +3,7 @@ class_name DataController extends Node
 var streak = 0;
 var tasksCompleted = 0;
 var tasksList = []
+var completedTasksList = []
 
 var hatsOwned = []
 var hatDatabase = []
@@ -19,7 +20,10 @@ func load_data():
 		for task in saveJSON["tasks"]:
 			var t = Task.new("", "", false, 0, 0, 0, 0)
 			t.fromDict(task);
-			tasksList.append(t)
+			if(task["isCompleted"]):
+				completedTasksList.append(t)
+			else:
+				tasksList.append(t)
 		hatsOwned = saveJSON["hatsOwned"]
 
 func save_data():

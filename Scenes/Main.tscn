@@ -112,7 +112,27 @@ theme = ExtResource("2_idj7w")
 text = "Stats"
 script = ExtResource("4_rgh2o")
 
-[connection signal="ready" from="VBoxContainer/ScrollContainer/VBoxContainer/TextureRect" to="." method="_on_texture_rect_ready"]
+[node name="Task Description" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="Task Description"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.63529414)
+
+[node name="Panel" type="Panel" parent="Task Description"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 26.0
+offset_top = 31.0
+offset_right = -27.0
+offset_bottom = -43.0
+grow_horizontal = 2
+grow_vertical = 2
+
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/AddTask" to="." method="_on_add_clicked"]
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/Shop" to="." method="_on_shop_clicked"]
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/Stats" to="." method="_on_stats_pressed"]
