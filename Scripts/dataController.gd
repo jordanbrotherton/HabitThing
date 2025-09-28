@@ -30,6 +30,8 @@ func save_data():
 	var taskArr = [] 
 	for task in tasksList:
 		taskArr.append(task.toDict())
+	for task in completedTasksList:
+		taskArr.append(task.toDict())
 	var saveDict = {
 		"streak" : streak,
 		"tasksCompleted": tasksCompleted,

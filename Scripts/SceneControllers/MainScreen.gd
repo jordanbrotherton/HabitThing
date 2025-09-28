@@ -41,6 +41,10 @@ func _on_due_list_item_clicked(index: int, at_position: Vector2, mouse_button_in
 			$TaskD/TaskN3.visible = true
 
 func set_description(num):
+	if(ControlsData.tasksList[num].isFocus):
+		$TaskD/Focus.text = "Focus"
+	else:
+		$TaskD/Focus.text = "Mark as Complete"
 	$TaskD/TaskN.text = ControlsData.tasksList[num].taskName
 	$TaskD/TaskN2.text = ControlsData.tasksList[num].taskDescription
 
@@ -62,7 +66,14 @@ func _on_focus_pressed() -> void:
 	$TaskD/TaskN.visible = false
 	$TaskD/TaskN2.visible = false
 	$TaskD/TaskN3.visible = false
-	get_tree().change_scene_to_file("res://Scenes/Focus.tscn")
+	if(ControlsData.tasksList[task_index].isFocus):
+		get_tree().change_scene_to_file("res://Scenes/Focus.tscn")
+	else:
+		ControlsData.tasksList[task_index].isCompleted = true
+		ControlsData.completedTasksList.append(ControlsData.tasksList[task_index])
+		ControlsData.tasksList.erase(ControlsData.tasksList[task_index])
+		ControlsData.save_data()
+		get_tree().change_scene_to_file("res://Scenes/Main.tscn")
 
 
 func _on_complete_list_item_clicked(index: int, at_position: Vector2, mouse_button_index: int) -> void:
@@ -70,7 +81,7 @@ func _on_complete_list_item_clicked(index: int, at_position: Vector2, mouse_butt
 			task_index = index
 			set_description(task_index)
 			queue_redraw()
-            $TaskD.visible = true
+			$TaskD.visible = true
 			$TaskD/Transperancy.visible = true
 			$TaskD/Panel.visible = true
 			$TaskD/X_button.visible = true
