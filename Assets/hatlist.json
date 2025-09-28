@@ -2,31 +2,31 @@
   "hats": [
 	{
 	  "name": "Halo",
-    "desc": "",
 	  "cost": 5,
 	  "rarity": "Common",
-	  "path": "res://lilguy/angel/angel.tres"
+	  "path": "res://lilguy/halo/halo.tres",
+	  "desc": "Though L'il Guy has not gotten wings blessed by a goddess to be able to fly, he still has the halo associated with many angels."
 	},
 	{
 	  "name": "Wizard",
-    "desc": "",
 	  "cost": 10,
 	  "rarity": "Rare",
-	  "path": "res://lilguy/wizard/wizard.tres"
+	  "path": "res://lilguy/wizard/wizard.tres",
+	  "desc": ""
 	},
 	{
 	  "name": "Pirate",
-    "desc": "",
 	  "cost": 15,
 	  "rarity": "Epic",
-	  "path": "res://lilguy/pirate/pirate.tres"
+	  "path": "res://lilguy/pirate/pirate.tres",
+	  "desc": ""
 	},
 	{
 	  "name": "Transparent",
-    "desc": "",
 	  "cost": 20,
 	  "rarity": "Legendary",
-	  "path": "res://lilguy/transparent/transparent.tres"
+	  "path": "res://lilguy/transparent/transparent.tres",
+	  "desc": ""
 	}
   ]
 }

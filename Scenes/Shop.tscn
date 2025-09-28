@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://cgya26acvym8i"]
+[gd_scene load_steps=8 format=3 uid="uid://cgya26acvym8i"]
 
 [ext_resource type="Theme" uid="uid://bbdjky584xraq" path="res://Theme.tres" id="1_kjfcx"]
 [ext_resource type="Script" uid="uid://dyth805qvn3s8" path="res://Scripts/SceneControllers/Shop.gd" id="1_wndna"]
@@ -6,6 +6,20 @@
 [sub_resource type="LabelSettings" id="LabelSettings_5iolr"]
 font_size = 32
 font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_iidq5"]
+font_size = 32
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_lagin"]
+font_size = 14
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iidq5"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lagin"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [node name="Shop" type="Control"]
 layout_mode = 3
@@ -64,9 +78,8 @@ theme = ExtResource("1_kjfcx")
 text = "Return"
 
 [node name="HatInfo" type="CanvasLayer" parent="."]
-visible = false
 
-[node name="ColorRect" type="ColorRect" parent="HatInfo"]
+[node name="Transparency" type="ColorRect" parent="HatInfo"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -74,6 +87,106 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0.52156866)
 
+[node name="Sheet" type="ColorRect" parent="HatInfo"]
+anchors_preset = -1
+anchor_left = 0.136
+anchor_top = 0.116000004
+anchor_right = 0.86100006
+anchor_bottom = 0.92700005
+offset_left = 0.0399971
+offset_top = -0.2400055
+offset_right = 0.039978027
+offset_bottom = -0.2800293
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.8732984, 0.8732984, 0.8732984, 0.9411765)
+
+[node name="Animation" type="TextureRect" parent="HatInfo/Sheet"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.245
+anchor_top = 0.164
+anchor_right = 0.77400005
+anchor_bottom = 0.41400003
+offset_left = 0.054992676
+offset_top = -0.116004944
+offset_right = -0.014007568
+offset_bottom = 0.13398743
+grow_horizontal = 2
+grow_vertical = 2
+stretch_mode = 5
+
+[node name="HatName" type="Label" parent="HatInfo"]
+anchors_preset = -1
+anchor_left = 0.149
+anchor_top = 0.124000005
+anchor_right = 0.855
+anchor_bottom = 0.21200001
+offset_left = 106.36
+offset_top = -2.3600006
+offset_right = -107.80002
+offset_bottom = -3.680008
+grow_horizontal = 2
+grow_vertical = 2
+label_settings = SubResource("LabelSettings_iidq5")
+horizontal_alignment = 1
+
+[node name="Description" type="Label" parent="HatInfo"]
+anchors_preset = -1
+anchor_left = 0.133
+anchor_top = 0.45600003
+anchor_right = 0.86100006
+anchor_bottom = 0.92300004
+offset_left = 0.11999893
+offset_top = 0.15997314
+offset_right = 0.039978027
+offset_bottom = 0.27996826
+label_settings = SubResource("LabelSettings_lagin")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="XButton" type="Button" parent="HatInfo"]
+anchors_preset = -1
+anchor_left = 0.81100005
+anchor_right = 1.0
+anchor_bottom = 0.108
+offset_left = 0.039978027
+offset_bottom = -0.12000275
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_iidq5")
+text = "X"
+
+[node name="Left" type="Button" parent="HatInfo"]
+anchors_preset = -1
+anchor_top = 0.44500002
+anchor_right = 0.136
+anchor_bottom = 0.58400005
+offset_top = 0.19998169
+offset_right = 0.0399971
+offset_bottom = 0.23995972
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_lagin")
+text = "<"
+
+[node name="Right" type="Button" parent="HatInfo"]
+anchors_preset = -1
+anchor_left = 0.86700004
+anchor_top = 0.44500002
+anchor_right = 1.0
+anchor_bottom = 0.58400005
+offset_left = -0.120025635
+offset_top = 0.19998169
+offset_right = 1.0
+offset_bottom = 0.23995972
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_lagin")
+text = ">"
+
 [connection signal="item_clicked" from="VBoxContainer/ScrollContainer/VBoxContainer/DueList" to="." method="_on_due_list_item_clicked"]
 [connection signal="ready" from="VBoxContainer/ScrollContainer/VBoxContainer/DueList" to="." method="_on_due_list_ready"]
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/Back" to="." method="_on_back_pressed"]
+[connection signal="draw" from="HatInfo/HatName" to="." method="_on_hat_name_draw"]
+[connection signal="pressed" from="HatInfo/XButton" to="." method="_on_x_pressed"]
+[connection signal="pressed" from="HatInfo/Left" to="." method="_on_left_pressed"]
+[connection signal="pressed" from="HatInfo/Right" to="." method="_on_right_pressed"]

@@ -13,7 +13,7 @@ func load_hats():
 	var hatJSON = JSON.parse_string(hatJSONString.get_as_text())
 	for hat in hatJSON["hats"]:
 		print(hat["name"])
-		var hatEntry = Hat.new(hat["name"], hat["desc"], hat["path"], hat["cost"])
+		var hatEntry = Hat.new(hat["name"], hat["cost"], hat["rarity"], hat["path"],  hat["desc"])
 		hatDatabase.append(hatEntry)
 
 func _init() -> void:
